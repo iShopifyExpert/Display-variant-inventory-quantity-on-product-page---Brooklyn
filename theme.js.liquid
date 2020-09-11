@@ -1,0 +1,18 @@
+this.selectors = {
+      inventoryContainer: '[data-inventory]',
+};
+
+
+showVariantImage: function(evt) {
+      //Below this commented line
+      //if (variant && variant.featured_image) {
+      //  this.setActiveThumbnail(variant.featured_image.id);
+      //}
+
+      var vinventory = _VARIANTS[variant.id];
+      if (variant.inventory_management !== '') {
+        $(this.selectors.inventoryContainer, this.$container).text(vinventory);
+      } else {
+        $(this.selectors.inventoryContainer, this.$container).text('250');
+      }
+}
